@@ -8,12 +8,4 @@ import dagger.Component
 @Component
 interface AppComponent {
     val product: Product
-
-    @Component.Builder
-    interface Builder{
-        @BindsInstance
-        fun user(user: User): Builder
-
-        fun build(): AppComponent
-    }
 }
