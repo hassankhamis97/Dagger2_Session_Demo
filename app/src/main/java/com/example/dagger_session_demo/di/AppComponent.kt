@@ -6,15 +6,12 @@ import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Named
 
-@Component
+@Component(modules = [AppModule::class])
 interface AppComponent {
     val product: Product
 
     @Component.Builder
     interface Builder{
-        @BindsInstance
-        fun user(user: User): Builder
-
 
         @BindsInstance
         fun quantity(@Named("quantity") quantity: Int): Builder
