@@ -17,7 +17,7 @@ interface AppComponent {
 
 
         @BindsInstance
-        fun quantity(@Named("quantity") quantity: Int): Builder
+        fun quantity(@Quantity quantity: Int): Builder
 
         @BindsInstance
         fun price(@Named("price") price: Int): Builder
