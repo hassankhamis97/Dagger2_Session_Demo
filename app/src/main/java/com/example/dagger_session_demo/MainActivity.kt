@@ -3,6 +3,7 @@ package com.example.dagger_session_demo
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import com.example.dagger_session_demo.application.BaseApplication
 import com.example.dagger_session_demo.data.models.User
 import com.example.dagger_session_demo.di.DaggerAppComponent
 import javax.inject.Inject
@@ -16,7 +17,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        val appComponent = DaggerAppComponent.builder().quantity(5).price(8).build()
+        val appComponent = (application as BaseApplication).appComponent
         val product = appComponent.product
         appComponent.inject(this)
 
