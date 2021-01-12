@@ -6,7 +6,9 @@ import com.example.dagger_session_demo.data.models.User
 import dagger.BindsInstance
 import dagger.Component
 import javax.inject.Named
+import javax.inject.Singleton
 
+@Singleton
 @Component(modules = [AppModule::class])
 interface AppComponent {
     val product: Product
