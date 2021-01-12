@@ -4,7 +4,9 @@ import android.util.Log
 import javax.inject.Inject
 import javax.inject.Named
 
+
 data class Product @Inject constructor(
+        val seller: Seller,
         val user: User,
         @Named("quantity")
         var quantity: Int,

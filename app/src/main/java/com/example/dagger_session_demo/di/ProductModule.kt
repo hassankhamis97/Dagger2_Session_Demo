@@ -6,6 +6,12 @@ import dagger.Provides
 import javax.inject.Singleton
 
 @Module
-class AppModule {
+class ProductModule {
+    @ProductScope
+    @Provides
+    fun getUser(): User = User()
 
+    @ProductScope
+    @Provides
+    fun getWelcomeMessage(): String = "Welcome"
 }
