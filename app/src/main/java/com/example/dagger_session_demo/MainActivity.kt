@@ -29,13 +29,13 @@ class MainActivity : AppCompatActivity() {
         Log.d(TAG, "onCreate: --------------------- product1 ---------------------")
 
         Log.d(TAG, "onCreate: product1 $product1")
-        Log.d(TAG, "onCreate: product1 seller = ${product1.user}")
+        Log.d(TAG, "onCreate: product1 user = ${product1.user}")
         Log.d(TAG, "onCreate: product1 seller = ${product1.seller}")
 
         Log.d(TAG, "onCreate: --------------------- product2 ---------------------")
 
         Log.d(TAG, "onCreate: product1 $product2")
-        Log.d(TAG, "onCreate: product1 seller = ${product2.user}")
+        Log.d(TAG, "onCreate: product1 user = ${product2.user}")
         Log.d(TAG, "onCreate: product1 seller = ${product2.seller}")
 
     }
