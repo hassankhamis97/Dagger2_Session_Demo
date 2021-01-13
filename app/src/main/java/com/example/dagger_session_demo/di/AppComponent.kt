@@ -12,5 +12,6 @@ import javax.inject.Singleton
 @Singleton
 @Component(modules = [AppModule::class])
 interface AppComponent {
-    val seller: Seller
+//    val seller: Seller
+    fun getProductComponentBuilder(): ProductComponent.Builder
 }

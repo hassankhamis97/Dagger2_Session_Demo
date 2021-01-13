@@ -7,7 +7,6 @@ import com.example.dagger_session_demo.application.BaseApplication
 import com.example.dagger_session_demo.data.models.Product
 import com.example.dagger_session_demo.data.models.User
 import com.example.dagger_session_demo.di.DaggerAppComponent
-import com.example.dagger_session_demo.di.DaggerProductComponent
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -22,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         val appComponent = (application as BaseApplication).appComponent
-        val productComponent = DaggerProductComponent.builder().quantity(2).price(150).appComponent(appComponent).build()
+        val productComponent = appComponent.getProductComponentBuilder().quantity(2).price(150).build()
         productComponent.inject(this)
 
 
